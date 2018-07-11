@@ -5,3 +5,5 @@ install:
   - pip install -r requirements.txt
 script:
   - python -m opengraph_io.tests.test_opengraph_io
+after_success:
+  - coveralls
