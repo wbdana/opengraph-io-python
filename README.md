@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/wbdana/opengraph-io-python.svg?branch=master)](https://travis-ci.org/wbdana/opengraph-io-python)
 [![Coverage Status](https://coveralls.io/repos/github/wbdana/opengraph-io-python/badge.svg?branch=master)](https://coveralls.io/github/wbdana/opengraph-io-python?branch=master)
 
-[OpenGraph.io](https://www.opengraph.io/) client library for [Ruby](https://www.ruby-lang.org/en/). Given a URL, the client will make a HTTP request to OpenGraph.io which will scrape the site for OpenGraph tags. If tags exist the tags will be returned to you.
+[OpenGraph.io](https://www.opengraph.io/) client library for [Python](https://www.python.org/). Given a URL, the client will make a HTTP request to OpenGraph.io which will scrape the site for OpenGraph tags. If tags exist the tags will be returned to you.
 
 Oftentimes the appropriate tags will not exist and this is where OpenGraph.io shines. It will infer what the OpenGraph tags probably would be and return them to you as ```hybridGraph```.
 
