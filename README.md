@@ -28,7 +28,8 @@ To use the client, you must first initialize an instance of the class with your 
 from opengraph_io import OpenGraphIO
 opengraph = OpenGraphIO({ 'app_id': 'your_app_id_here!' })
 ```
-#### Initialization with Setting Default Options
+
+#### Setting Default Options at Initialization
 
 You may also initialize your OpenGraphIO instance with default options. For example, if you would always like to perform a ```full_render```, you can pass that parameter in the options dict at initialization along with your ```app_id```:
 
