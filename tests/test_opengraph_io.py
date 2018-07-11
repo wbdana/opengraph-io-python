@@ -1,7 +1,8 @@
 import unittest
 import os
 from urllib.parse import quote_plus
-from ..opengraph_io import OpenGraphIO
+from opengraph_io import OpenGraphIO
+
 
 class TestOpenGraphIO(unittest.TestCase):
     def test_default_initialization(self):
@@ -11,7 +12,7 @@ class TestOpenGraphIO(unittest.TestCase):
         options = {
             'app_id': os.environ['APP_ID']
         }
-
+        og = OpenGraphIO
         og = OpenGraphIO(options)
         self.assertEqual(og.app_id, os.environ['APP_ID'])
         self.assertEqual(og.cache_ok, True)
@@ -105,6 +106,3 @@ class TestOpenGraphIO(unittest.TestCase):
         self.assertEqual(response['hybridGraph']['url'], test_url)
         self.assertEqual(response['hybridGraph']['title'], 'Build software better, together')
 
-
-if __name__ == '__main__':
-    unittest.main()
