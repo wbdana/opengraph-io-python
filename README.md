@@ -16,7 +16,12 @@ If you end up having very heavy usage, the vast majority of projects will be tot
 **NOTE** Our free plan previously required no `appId` but was unfortunately abused. The free plan still exists and is free forever, you will just have to create an account on [OpenGraph.io](https://www.opengraph.io/).
 
 ## Installation
-To come!
+
+Installation is simple with pip:
+
+```
+pip install opengraph-io
+```
 
 ## Usage
 
