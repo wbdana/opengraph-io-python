@@ -12,7 +12,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://www.github.com/wbdana/opengraph-io-python",
-    packages=['opengraph_io'],
+    packages=['opengraphio'],
     install_requires=[
         "requests>=2.19",
     ],
