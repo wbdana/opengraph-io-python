@@ -1,7 +1,7 @@
 import unittest
 import os
 from urllib.parse import quote_plus
-from opengraph_io import OpenGraphIO
+from opengraphio import OpenGraphIO
 
 
 class TestOpenGraphIO(unittest.TestCase):

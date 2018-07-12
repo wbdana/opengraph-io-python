@@ -20,17 +20,17 @@ If you end up having very heavy usage, the vast majority of projects will be tot
 Installation is simple with pip:
 
 ```
-pip install opengraph-io
+pip install opengraphio
 ```
 
 ## Usage
 
 #### Initialization
 
-To use the client, you must first initialize an instance of the class with your ```app_id```. First, ```import 'opengraph_io'``` and then initialize an instance of the OpenGraphIO, passing it an options dict containing the required ```app_id``` key as a string:
+To use the client, you must first initialize an instance of the class with your ```app_id```. First, ```from opengraphio import OpenGraphIO``` and then initialize an instance of OpenGraphIO, passing it an options dict containing the required ```app_id``` key as a string:
 
 ```py
-from opengraph_io import OpenGraphIO
+from opengraphio import OpenGraphIO
 opengraph = OpenGraphIO({ 'app_id': 'your_app_id_here!' })
 ```
 
@@ -39,7 +39,7 @@ opengraph = OpenGraphIO({ 'app_id': 'your_app_id_here!' })
 You may also initialize your OpenGraphIO instance with default options. For example, if you would always like to perform a ```full_render```, you can pass that parameter in the options dict at initialization along with your ```app_id```:
 
 ```py
-from opengraph_io import OpenGraphIO
+from opengraphio import OpenGraphIO
 opengraph = OpenGraphIO({ 'app_id': 'your_app_id_here!', 'full_render': True })
 ```
 
@@ -68,7 +68,7 @@ This will return a dict containing the response. See [https://www.opengraph.io/d
 ```get_site_info``` takes an optional second argument, consisting of an ```options``` dict, similar to the ```options``` dict used at initialization. The options supplied here will override the default options set at initialization for this request. For example, let's say you initialize your ```OpenGraphIO``` instance like this:
 
 ```py
-from opengraph_io import OpenGraphIO
+from opengraphio import OpenGraphIO
 opengraph = OpenGraphIO({ 'app_id': 'your_app_id_here!' })
 ```
 
