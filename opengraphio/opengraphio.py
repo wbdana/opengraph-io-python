@@ -1,5 +1,10 @@
 import requests
-from urllib.parse import quote_plus
+# Handling Python 2/3 quote_plus import
+import sys
+if sys.version_info[0] > 2:
+    from urllib.parse import quote_plus
+else:
+    from urllib import quote_plus
 
 class OpenGraphIO:
     def __init__(self, options={}):
