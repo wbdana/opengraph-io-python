@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="opengraphio",
-    version="0.1.1",
+    version="1.0.0",
     author="Will Dana",
     author_email="william.b.dana@gmail.com",
     description="A Python client for opengraph.io, a website scraper to grab OpenGraph tags or supplement them when they don't exist.",

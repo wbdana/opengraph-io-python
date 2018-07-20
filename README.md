@@ -1,4 +1,4 @@
-# opengraph-io-python ( Python Client 0.1.1 )
+# opengraph-io-python ( Python Client 1.0.0 )
 
 [![Build Status](https://travis-ci.org/wbdana/opengraph-io-python.svg?branch=master)](https://travis-ci.org/wbdana/opengraph-io-python)
 [![Coverage Status](https://coveralls.io/repos/github/wbdana/opengraph-io-python/badge.svg?branch=master)](https://coveralls.io/github/wbdana/opengraph-io-python?branch=master)
