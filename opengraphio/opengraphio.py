@@ -5,13 +5,14 @@ try:
 except ImportError:
     from urllib import quote_plus
 
+
 class OpenGraphIO:
     def __init__(self, options={}):
         """
         Initialize OpenGraphIO instance with required app_id.
         """
         # Throw an error if app_id is not present in options dict
-        if not 'app_id' in options:
+        if 'app_id' not in options:
             raise KeyError('app_id must be supplied when making requests to the API. Get a free app_id by signing up here: https://www.opengraph.io/')
 
         self.app_id = options['app_id']
