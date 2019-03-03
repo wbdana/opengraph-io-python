@@ -1,7 +1,8 @@
-# opengraph-io-python ( Python Client 1.0.0 )
+# opengraph-io-python ( Python Client 1.0.3 )
 
 [![Build Status](https://travis-ci.org/wbdana/opengraph-io-python.svg?branch=master)](https://travis-ci.org/wbdana/opengraph-io-python)
 [![Coverage Status](https://coveralls.io/repos/github/wbdana/opengraph-io-python/badge.svg?branch=master)](https://coveralls.io/github/wbdana/opengraph-io-python?branch=master)
+[![Downloads](https://pepy.tech/badge/opengraphio)](https://pepy.tech/project/opengraphio)
 
 [OpenGraph.io](https://www.opengraph.io/) client library for [Python](https://www.python.org/). Given a URL, the client will make a HTTP request to OpenGraph.io which will scrape the site for OpenGraph tags. If tags exist the tags will be returned to you.
 
