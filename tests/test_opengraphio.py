@@ -88,11 +88,17 @@ class TestOpenGraphIO(unittest.TestCase):
 
     def test_get_results_with_app_id(self):
         og = OpenGraphIO({'app_id': os.environ['APP_ID']})
-        test_url = 'https://github.com'
+        test_url = 'https://google.com'
         response = og.get_site_info(test_url)
-
-        self.assertEqual(response['hybridGraph']['url'], test_url)
-        self.assertEqual(response['hybridGraph']['title'], 'Build software better, together')
+        hybrid_graph = response['hybridGraph']
+        self.assertEqual(hybrid_graph['url'], test_url)
+        self.assertEqual(hybrid_graph['title'], 'Google')
+        self.assertEqual(
+            hybrid_graph['description'],
+            'Search the world\'s information, including webpages,' +
+            ' images, videos and more. Google has many special features' +
+            ' to help you find exactly what you\'re looking for.'
+        )
 
     def test_get_results_with_options(self):
         og = OpenGraphIO({
@@ -100,9 +106,15 @@ class TestOpenGraphIO(unittest.TestCase):
             'cache_ok': False,
             'full_render': True
         })
-        test_url = 'https://github.com'
+        test_url = 'https://google.com'
         response = og.get_site_info(test_url)
-
-        self.assertEqual(response['hybridGraph']['url'], test_url)
-        self.assertEqual(response['hybridGraph']['title'], 'Build software better, together')
+        hybrid_graph = response['hybridGraph']
+        self.assertEqual(hybrid_graph['url'], test_url)
+        self.assertEqual(hybrid_graph['title'], 'Google')
+        self.assertEqual(
+            hybrid_graph['description'],
+            'Search the world\'s information, including webpages,' +
+            ' images, videos and more. Google has many special features' +
+            ' to help you find exactly what you\'re looking for.'
+        )
 
