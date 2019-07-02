@@ -5,6 +5,14 @@ from opengraphio import OpenGraphIO
 
 
 class TestOpenGraphIO(unittest.TestCase):
+    def constants_for_test_cases(self):
+        return {
+            'test_url': 'https://github.com',
+            'test_title': 'Build software better, together',
+            'test_description': 'GitHub is where people build software. More than 36 million people use GitHub' +
+            ' to discover, fork, and contribute to over 100 million projects.'
+        }
+
     def test_default_initialization(self):
         """
         It should initialize with an app_id and default values
@@ -88,17 +96,11 @@ class TestOpenGraphIO(unittest.TestCase):
 
     def test_get_results_with_app_id(self):
         og = OpenGraphIO({'app_id': os.environ['APP_ID']})
-        test_url = 'https://google.com'
-        response = og.get_site_info(test_url)
+        response = og.get_site_info(self.constants_for_test_cases()['test_url'])
         hybrid_graph = response['hybridGraph']
-        self.assertEqual(hybrid_graph['url'], test_url)
-        self.assertEqual(hybrid_graph['title'], 'Google')
-        self.assertEqual(
-            hybrid_graph['description'],
-            'Search the world\'s information, including webpages,' +
-            ' images, videos and more. Google has many special features' +
-            ' to help you find exactly what you\'re looking for.'
-        )
+        self.assertEqual(hybrid_graph['url'], self.constants_for_test_cases()['test_url'])
+        self.assertEqual(hybrid_graph['title'], self.constants_for_test_cases()['test_title'])
+        self.assertEqual(hybrid_graph['description'], self.constants_for_test_cases()['test_description'])
 
     def test_get_results_with_options(self):
         og = OpenGraphIO({
@@ -106,15 +108,9 @@ class TestOpenGraphIO(unittest.TestCase):
             'cache_ok': False,
             'full_render': True
         })
-        test_url = 'https://google.com'
-        response = og.get_site_info(test_url)
+        response = og.get_site_info(self.constants_for_test_cases()['test_url'])
         hybrid_graph = response['hybridGraph']
-        self.assertEqual(hybrid_graph['url'], test_url)
-        self.assertEqual(hybrid_graph['title'], 'Google')
-        self.assertEqual(
-            hybrid_graph['description'],
-            'Search the world\'s information, including webpages,' +
-            ' images, videos and more. Google has many special features' +
-            ' to help you find exactly what you\'re looking for.'
-        )
+        self.assertEqual(hybrid_graph['url'], self.constants_for_test_cases()['test_url'])
+        self.assertEqual(hybrid_graph['title'], self.constants_for_test_cases()['test_title'])
+        self.assertEqual(hybrid_graph['description'], self.constants_for_test_cases()['test_description'])
 
